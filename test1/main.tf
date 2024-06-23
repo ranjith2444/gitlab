@@ -14,19 +14,10 @@ provider "gitlab" {
 }
 
 
-
-
-
 # Manage group members
 resource "gitlab_group_membership" "example_member" {
   group_id = 88998654
-  user_id  = 1234567  # Replace with the GitLab user ID
-  access_level = "developer"  # Access levels: guest, reporter, developer, maintainer, owner
+  user_id  = 21774009  
+  access_level = "developer"  # guest, reporter, developer, maintainer, owner
 }
 
-# Add another member to the group
-resource "gitlab_group_membership" "another_member" {
-  group_id = 88998654
-  user_id  = 2345678  # Replace with the GitLab user ID
-  access_level = "maintainer"
-}
