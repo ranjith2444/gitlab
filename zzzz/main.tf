@@ -1,6 +1,6 @@
-resource "gitlab_project" "example" {
-  name        = "example"
-  description = "My awesome codebase"
+module "gitlab_group_membership" {
 
-  visibility_level = "public"
+
+  source = "../gitlab_group_membership"
+  group_membership = var.group_membership
 }

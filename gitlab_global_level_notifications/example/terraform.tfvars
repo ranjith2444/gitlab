@@ -2,7 +2,7 @@ gitlab_token = "glpat-Pycm4Zq3X4QS-NyDMPRU"
 
 
 gitlab_global_level_notifications={
-    level = "watch"  #Valid values are:["disabled" "participating" "watch" "mention" "custom"]
+    level = "participating"  #Valid values are:["disabled" "participating" "watch" "mention" "custom"]
     # All the below values are only vaild of the level is custom else everything will be disabled.
     close_issue      = true
     close_merge_request= true

@@ -2,7 +2,7 @@
 
 
 module "chatGptWebApp" {
-  source                  = "../gitlab_global_level_notifications"
+  source                  = "../"
   level                   = var.gitlab_global_level_notifications.level
 
   close_issue      =  var.gitlab_global_level_notifications.close_issue
