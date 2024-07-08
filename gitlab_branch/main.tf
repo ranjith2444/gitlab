@@ -1,14 +1,14 @@
-
 terraform {
   required_providers {
     gitlab = {
       source  = "gitlabhq/gitlab"
-      version = ">= 3.0.0"
+      version = ">= 17.0.0"
     }
   }
 }
+# Fetching the existing project by given full path 
 data "gitlab_project" "git_lab_project" {
-  for_each = var.project_branch
+  for_each            = var.project_branch
   path_with_namespace = each.value.project_full_path
 }
 
