@@ -2,7 +2,7 @@ gitlab_token = "glpat-Pycm4Zq3X4QS-NyDMPRU"
 
 project_push_rules = {
   "project1_push_rule" = {
-    project_full_path             = "ranjith242/singleproject"
+    project_full_path             = "manual_group_test/temp1/arina"
     author_email_regex            = "@gitlab.com$"
     branch_name_regex             = "(feat|fix)\\/*"
     commit_committer_check        = true

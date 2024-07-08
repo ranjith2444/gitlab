@@ -6,5 +6,11 @@ project_label = {
     label_name        = "fixme"
     description       = "issue with failing tests"  
     color             =  "#ffcc00"   #https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords
+},
+ "project1_member_2" = {
+    project_full_path = "manual_group_test/temp1/test1project"
+    label_name        = "testme"
+    description       = "issue with failing tests"  
+    color             =  "#ffcc00"   #https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords
 }
 }

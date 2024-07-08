@@ -5,7 +5,12 @@ group_custom_attribute = {
       group_full_path  = "manual_group_test/temp1"
       custom_attribute = {                     
         "Created_By" = "Ploceus",
-        "Department" = "CIS"
+        "Department" = "CIS",
+        "value1"="value2"
       }
    }
 }
+
+
+
+

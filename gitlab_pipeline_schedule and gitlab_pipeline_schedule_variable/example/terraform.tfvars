@@ -11,7 +11,8 @@ pipeline_schedule_and_variable = {
     take_ownership    = true       # Optional =  When set to true, the user represented by the token running Terraform will take ownership of the scheduled pipeline prior to editing it. This can help when managing scheduled pipeline drift when other users are making changes outside Terraform.
      schedule_varibales = {                     
       "Created_By" = "Ploceus",
-      "Department" = "CIS"
+      "Department" = "CIS",
+      "test" = "test23"
     }
 }
 }
