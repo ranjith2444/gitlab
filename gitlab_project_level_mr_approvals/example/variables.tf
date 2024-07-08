@@ -3,22 +3,15 @@ variable "gitlab_token" {
   type        = string
 }
 
-variable "project_push_rules" {
+variable "gitlab_project_level_mr_approvals" {
   type = map(object({
-      project_full_path  = string
-      author_email_regex =string 
-      branch_name_regex =string 
-      commit_committer_check = bool
-      commit_committer_name_check =bool
-      commit_message_negative_regex =string 
-      commit_message_regex =string 
-      deny_delete_tag =bool 
-      file_name_regex =string 
-      max_file_size= number
-      member_check =bool 
-      prevent_secrets =bool 
-      reject_unsigned_commits =bool
+      project_full_path                              = string
+      disable_overriding_approvers_per_merge_request = bool
+      merge_requests_author_approval                 = bool
+      merge_requests_disable_committers_approval     = bool
+      require_password_to_approve                    = bool
+      reset_approvals_on_push                        = bool
+      selective_code_owner_removals                  = bool  # selective_code_owner_removals can only be enabled when reset_approvals_on_push is disabled  
   }))
 }
-
 

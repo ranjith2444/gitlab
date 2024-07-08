@@ -1,4 +1,3 @@
-
 terraform {
   required_providers {
     gitlab = {
@@ -7,8 +6,10 @@ terraform {
     }
   }
 }
+
+# Fetching the existing project by given full path 
 data "gitlab_project" "git_lab_project" {
-  for_each = var.project_membership
+  for_each            = var.project_membership
   path_with_namespace = each.value.project_full_path
 }
 

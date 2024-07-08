@@ -1,4 +1,3 @@
-
 terraform {
   required_providers {
     gitlab = {
@@ -7,13 +6,15 @@ terraform {
     }
   }
 }
+
+# Fetching the existing group  by given full path 
 data "gitlab_group" "group" {
-  for_each = var.group_variable
-  full_path  = each.value.group_full_path
+  for_each    = var.group_variable
+  full_path   = each.value.group_full_path
 }
 
 resource "gitlab_group_variable" "example" {
-  for_each = var.group_variable
+  for_each          = var.group_variable
   group             = data.gitlab_group.group[each.key].id
   description       = each.value.description
   key               = each.value.key

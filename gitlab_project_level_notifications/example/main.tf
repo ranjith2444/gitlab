@@ -2,7 +2,7 @@ module "gitlab_project_level_notifications" {
   for_each = var.gitlab_project_level_notifications
 
   source = "../"
-  project_full_path              = each.value.project_full_path
+  project_full_path             = each.value.project_full_path
   level                         = each.value.level
   close_issue                   = each.value.close_issue
   close_merge_request           = each.value.close_merge_request

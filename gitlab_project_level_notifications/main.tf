@@ -1,4 +1,3 @@
-
 terraform {
   required_providers {
     gitlab = {
@@ -11,7 +10,7 @@ terraform {
   is_custom_level = var.level == "custom"
 }
 
-
+# Fetching the existing project by given full path 
 data "gitlab_project" "git_lab_project" {
    path_with_namespace = var.project_full_path
 }
@@ -40,7 +39,7 @@ resource "gitlab_project_level_notifications" "custom" {
 }
 
 resource "gitlab_project_level_notifications" "others" {
-  count = local.is_custom_level ? 0 : 1
+  count   = local.is_custom_level ? 0 : 1
   project = data.gitlab_project.git_lab_project.id
-  level  = var.level
+  level   = var.level
 }
